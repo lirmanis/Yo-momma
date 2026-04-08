@@ -1,30 +1,35 @@
-let x = 0;
 
-function fetchJokes() {
+let x = 0;
+let t = 2
+
   let container = document.getElementById("balz");
-  let container2 = document.getElementById("balz2");
   container.innerHTML = "Select category and amount of jokes";
 
+function fetchJokes() {
+  let container2 = document.getElementById("balz2");
+
   for (let i = 0; i < x; i++) {
-    fetch('https://yomama-jokes.com/api/random')
+    fetch('https://yomama-jokes.com/api/fat')
       .then(response => response.json())
       .then(data => {
         container2.innerHTML += `~ ${data.joke} <br><br>`;
+        x = 0;
+        
       });
   }
 }
 
-function listQ() {
-    let e = document.getElementById("dropdownNumber");
-    let value = e.value; 
-  
-    if (e.selectedIndex > 0) {
-      x = x + Number(value);
+  function listQ() {
+    let e = document.getElementById("dropdown").value;
+    if (e > 10) {
+      return alert("Max jokes 10 vro"); 
+    }
+    else if (e > 0) {
+      x = x + e;
     }
   
     fetchJokes();
-  }
 
-document.getElementById("dropdownNumber").addEventListener("click", listQ);
+  }
 
 fetchJokes();
