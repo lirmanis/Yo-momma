@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Oi&family=Rye&display=swap');
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0A0A0A;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: #ff69cd;
+    box-shadow: #f743bb 0px 2px 8px 0px;
+    width: 97%;
+    height: 90px;
+    margin: 0px auto;
+    border-radius: 0 0 .5rem .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-logo{
+    font-family: "Rye", serif;
+    font-size: 40px;
+    text-shadow: 2px 2px black;
+}
+.navbar-desc{
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 2px 2px black;
+}
+.container1{
+    
+}
+.container2{
+    
+}
+.joke-container{
+    display: flex;
+    justify-self: start;
+    background-color: rgb(34, 34, 34);
+    border-radius: 7px;
+    width: 50%;
+    height: 300px;
+    margin-top: 15px;
+    margin-left: 25px;
+    text-indent: 2%;
+    font-size: medium;   
+    text-wrap: wrap;
+    font-weight: lighter;
+}
+
+#balz {
+    text-wrap: nowrap;
+    color: #4d4d4d;
+}
+
+#balz2 {
+    text-wrap: nowrap;
+    color: #ffffff;
+    font-size: larger;
+}
+
+@media (width < 1200px) {
+    #balz {
+        text-wrap: wrap; 
+        font-size: medium; 
+    }
+}
+
+@media (width < 1000px) {
+    .container {
+        font-size: x-small; 
+    }
+}
+
+.selection-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#dropdownNumber,
+.dropdown{
+    background-color: #f743bb;
+    color: white;
+    border: 2px solid rgb(182, 39, 134);
+    border-radius: 7px;
+    font-family: "Mouse Memoirs", sans-serif;
+    font-size: 20px;
+    width: 10%;
+}
