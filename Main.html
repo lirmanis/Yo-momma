@@ -3,32 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Evil insul</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <ul id="jokes"></ul>
+    <div class="navbar">
+        <div class="navbar-logo">Yo momma disses</div>
+        <div class="navbar-desc">Getting insulted? Don't worry! We've got the best insults for yo opps momma</div>
+    </div>
+<div>
+    <div class="container1">
+        <div class="joke-container">
+            <h1 id="balz"></h1>
+            <h1 id="balz2"></h1>
+    </div>
 
-    <script>
-        main()
+    <div class="selection-container">
+        <select class="dropdown">
+            <option value="fat">Fat<option>
+            <option value="skinny">Skinny<option>
+            <option value="stupid">Stupid<option>
+            <option value="old">Old<option>
+            <option value="tall">Tall<option>
+            <option value="ugly">Ugly<option>
+            <option value="poor">Poor<option>
+            <option value="hairy">Hairy<option>
+            <option value="short">Short<option>
+            <option value="nasty">Nasty<option>
+            <option value="bald">Bald<option>
+        </select>
 
-        async function main() {
-            const jokes = await getDih()
+        <select id="dropdownNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+</div>
+</div>
+<div class="container2">
 
-            const jokesUL = document.querySelector("#jokes")
-
-            for (const joke of jokes) {
-                jokesUL.innerHTML += jokes[5]
-                return
-            }
-        }
-
-       async function getDih() {
-          const res = await fetch("jokes.JSON")
-          const data = await res.json()
-          return data
-        }
-    </script>
-    
+</div>
+</div>
+    <script id="joke" src="insults.js" defer ></script>
 </body>
 </html>
