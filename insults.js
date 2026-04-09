@@ -1,18 +1,33 @@
 
 let x = 0;
-let t = 2
 
-  let container = document.getElementById("balz");
-  container.innerHTML = "Select category and amount of jokes";
+let container = document.getElementById("balz");
+container.innerHTML = "Select category and amount of jokes";
 
 function fetchJokes() {
   let container2 = document.getElementById("balz2");
+  let kate = document.getElementById("kate").value;
+  container2.innerHTML = ""
 
   for (let i = 0; i < x; i++) {
-    fetch('https://yomama-jokes.com/api/fat')
+    fetch('https://yomama-jokes.com/api/random')
       .then(response => response.json())
       .then(data => {
         container2.innerHTML += `~ ${data.joke} <br><br>`;
+        let z=0;
+
+        while(z<1) {
+          if(container2.innerHTML.match(kate)) {
+            console.log("aa")
+            z = z+1;
+            break
+          }
+          else {
+            container2.innerHTML = ""
+            fetchJokes()
+          }
+        }
+        
         x = 0;
         
       });
@@ -29,7 +44,4 @@ function fetchJokes() {
     }
   
     fetchJokes();
-
   }
-
-fetchJokes();
