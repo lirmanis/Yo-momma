@@ -20,7 +20,7 @@ async function fetchJokes() {
       throw new Error("error")
     }
         const data = await response.json()
-        container2.innerHTML += `~ ${data.joke} <br><br>`;
+        container2.innerHTML += ` ~ ${data.joke} <br><br>`;
         jk++;
         joker()
     }
