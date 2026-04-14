@@ -34,6 +34,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: bolder;
+    text-wrap: nowrap;
     font-style: italic;
     font-size: 15px;
     text-shadow: 2px 1px black;
