@@ -43,8 +43,8 @@ async function listQ() {
     }
 
     else if (e > 3) {
-        return alert("Max jokes 3 vro"); 
-      }
+      return alert("Max jokes 3 vro");
+    }
 
       else {
         x = e;
