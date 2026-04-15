@@ -34,9 +34,8 @@ async function fetchJokes() {
 }
 
 async function listQ() {
-
     if(z>=10) {
-      document.getElementById('wrapper').style.display = 'block';
+      container2.innerHTML += ` ~ Daily limit reached, come back tomorrow! <br><br>`;
       return
     }
 
@@ -50,7 +49,4 @@ async function listQ() {
   }
 
   fetchJokes();
-}
-function closebtn(){
-  document.getElementById('wrapper').style.display = 'none';
 }
