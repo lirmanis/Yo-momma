@@ -23,8 +23,10 @@ body {
 }
 
 .navbar-logo {
+    display: flex;
     font-family: "Special Elite", system-ui;
-    font-size: 40px;
+    flex-wrap: nowrap;
+    font-size: 2rem;
     color: #fff8b8;
     text-shadow: 2px 2px black;
 }
@@ -36,12 +38,17 @@ body {
     font-weight: bolder;
     text-wrap: nowrap;
     font-style: italic;
-    font-size: clamp(0.5rem, 1vw, 0.9rem);
     text-shadow: 2px 1px black;
     background-color: rgba(44, 44, 44, 0.5);    
     border-radius: 1rem;
-    width: clamp(350px, 50%, 600px);
-    height: clamp(1px, 35%, 100px);
+    width: 45rem;
+    height: 35px;
+}
+
+@media (width < 1000px) {
+    .navbar-desc {
+        display: none;
+    }
 }
 
 .center {
@@ -83,7 +90,7 @@ body {
     text-wrap: nowrap;
     font-family: "Special Elite", system-ui;
     font-weight: lighter;
-    font-size: 1.5px;
+    font-size: 2rem;
     border-radius: 10px;
     padding: 0 15px;
     height: 40px;
@@ -97,8 +104,7 @@ body {
     margin-left: 30px;
     text-wrap: wrap;
     color: #ffffff;
-    font-size: 1.5px;
-    border-left: 4px solid #f553bf;
+    font-size: 1.5rem;
     min-height: 25vh;
     padding: 10px 0;
 }
@@ -116,10 +122,10 @@ body {
 @media (width < 1200px) {
     #balz {
         text-wrap: wrap; 
-        font-size: medium; 
+        font-size: 1rem; 
     }
     #balz2 li {
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
 
