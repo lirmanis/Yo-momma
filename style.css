@@ -199,13 +199,14 @@ body {
 
 .popup-box {
     position: relative;
-    width: 100%;
-    width: 400px;
+    width: 15%;
     padding: 50px;
     box-shadow: 0px 2px 16px rgba(255, 127, 244, 0.9);
     border-radius: 20px;
     text-align: center;
     background-color: #1a1a1a;
+    align-self: center;
+    margin-top: 250px;
 }
 
 .close-button {
