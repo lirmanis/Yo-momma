@@ -32,9 +32,23 @@ async function fetchJokes() {
   }
 }
 
+
 async function listQ() {
 
-    if(z>=7) {
+  let z = false
+
+  if(z==false) {
+    z = true
+  }
+
+  while (z == true) {
+    console.log("waa")
+    z = false
+    break
+  }
+
+
+    if(z>=10) {
       document.getElementById('wrapper').style.display = 'block';
       return
     }
