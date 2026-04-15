@@ -1,9 +1,9 @@
 let x = 0;
 let jk = 0;
 let z=0;
+let container2 = document.getElementById("balz2");
 
 async function fetchJokes() {
-  let container2 = document.getElementById("balz2");
   container2.innerHTML = ""
 
   try {
@@ -34,19 +34,22 @@ async function fetchJokes() {
 }
 
 async function listQ() {
-    if(z>=10) {
-      container2.innerHTML += ` ~ Daily limit reached, come back tomorrow! <br><br>`;
+  let e = Number(document.getElementById("dropdown").value)
+
+    if(z >= 10) {
+      container2.innerHTML = ""
+      container2.innerHTML = ` ~ Daily limit reached, come back tomorrow! <br><br>`;
       return
     }
 
-  let e = document.getElementById("dropdown").value;
-  if (e > 3) {
-    return alert("Max jokes 3 vro"); 
-  }
-  else if (e > 0) {
-    x = e;
-    z=z+e;
-  }
+    else if (e > 3) {
+        return alert("Max jokes 3 vro"); 
+      }
+
+      else {
+        x = e;
+        z=z+e;
+      }
 
   fetchJokes();
 }
