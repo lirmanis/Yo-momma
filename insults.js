@@ -20,7 +20,8 @@ async function fetchJokes() {
       throw new Error("error")
     }
         const data = await response.json()
-        container2.innerHTML += ` ~ ${data.joke} <br><br>`;
+        const jokez = data.joke
+        container2.innerHTML += ` ~ ${jokez} <br><br>`;
         jk++;
         joker()
     }
@@ -32,21 +33,7 @@ async function fetchJokes() {
   }
 }
 
-
 async function listQ() {
-
-  let z = false
-
-  if(z==false) {
-    z = true
-  }
-
-  while (z == true) {
-    console.log("waa")
-    z = false
-    break
-  }
-
 
     if(z>=10) {
       document.getElementById('wrapper').style.display = 'block';
