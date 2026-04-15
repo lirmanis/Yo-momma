@@ -36,12 +36,12 @@ body {
     font-weight: bolder;
     text-wrap: nowrap;
     font-style: italic;
-    font-size: 15px;
+    font-size: clamp(0.5rem, 1vw, 0.9rem);
     text-shadow: 2px 1px black;
     background-color: rgba(44, 44, 44, 0.5);    
     border-radius: 1rem;
-    width: 52%;
-    height: 35px;
+    width: clamp(350px, 50%, 600px);
+    height: clamp(1px, 35%, 100px);
 }
 
 .center {
@@ -83,7 +83,7 @@ body {
     text-wrap: nowrap;
     font-family: "Special Elite", system-ui;
     font-weight: lighter;
-    font-size: 1.5vw;
+    font-size: 1.5px;
     border-radius: 10px;
     padding: 0 15px;
     height: 40px;
@@ -97,7 +97,7 @@ body {
     margin-left: 30px;
     text-wrap: wrap;
     color: #ffffff;
-    font-size: 1.5vw;
+    font-size: 1.5px;
     border-left: 4px solid #f553bf;
     min-height: 25vh;
     padding: 10px 0;
