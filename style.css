@@ -47,7 +47,9 @@ body {
 
 @media (width < 1000px) {
     .navbar-desc {
-        display: none;
+        width: 25rem;
+        text-wrap: wrap;
+        font-size: .6rem;
     }
 }
 
