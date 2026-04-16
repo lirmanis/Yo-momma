@@ -38,7 +38,7 @@ async function listQ() {
 
     if(z >= 10) {
       container2.innerHTML = ""
-      container2.innerHTML = ` ~ Daily limit reached, come back tomorrow! <br><br>`;
+      container2.innerHTML = ` ~ Limit reached, come back later! <br><br>`;
       return
     }
 
