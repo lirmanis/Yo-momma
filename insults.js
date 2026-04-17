@@ -1,16 +1,38 @@
-let x = 0;
-let jk = 0;
-let z=0;
-let container2 = document.getElementById("balz2");
+let ValueGlobal = 0;
+let JokeCounter = 0;
+let LimitChecker = 0;
+
+let MainContainer = document.getElementById("MainContainer");
+
+async function ValueEnteredCheck() {
+  let ValueEntered = Number(document.getElementById("dropdown").value)
+
+    if(LimitChecker >= 10) {
+      MainContainer.innerHTML = ""
+      MainContainer.innerHTML = ` ~ Limit reached, come back later! <br><br>`;
+      return
+    }
+
+    else if (ValueEntered > 3) {
+      return alert("Enter only 1-3 jokes.");
+    }
+
+      else {
+        ValueGlobal = ValueEntered;
+        LimitChecker = LimitChecker + ValueEntered;
+      }
+
+  fetchJokes();
+}
 
 async function fetchJokes() {
-  container2.innerHTML = ""
+  MainContainer.innerHTML = ""
 
   try {
-    async function joker() {
-        if (jk >= x) {
-            x = 0;
-            jk = 0;
+    async function jokeCheck() {
+        if (JokeCounter >= ValueGlobal) {
+            ValueGlobal = 0;
+            JokeCounter = 0;
             return;
         }
 
@@ -20,36 +42,20 @@ async function fetchJokes() {
       throw new Error("error")
     }
         const data = await response.json()
-        const jokez = data.joke
-        container2.innerHTML += ` ~ ${jokez} <br><br>`;
-        jk++;
-        joker()
+        const Jokes = data.joke
+
+        MainContainer.innerHTML += ` ~ ${Jokes} <br><br>`;
+        JokeCounter++;
+
+        jokeCheck()
     }
-    joker()
+    
+    jokeCheck()
   }
+
   catch(error) {
     console.log(error)
     return
   }
-}
 
-async function listQ() {
-  let e = Number(document.getElementById("dropdown").value)
-
-    if(z >= 10) {
-      container2.innerHTML = ""
-      container2.innerHTML = ` ~ Limit reached, come back later! <br><br>`;
-      return
-    }
-
-    else if (e > 3) {
-      return alert("Max jokes 3 vro");
-    }
-
-      else {
-        x = e;
-        z=z+e;
-      }
-
-  fetchJokes();
 }
